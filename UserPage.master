@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>网上手机商城</title>
+     <link rel="stylesheet" href="image/css.css" type="text/css" />
+      <script type="text/javascript" >
+function showsubmenu(sid)
+{
+whichEl = eval("submenu" + sid);
+if (whichEl.style.display == "none")
+{
+eval("submenu" + sid + ".style.display=\"\";");
+}
+else
+{
+eval("submenu" + sid + ".style.display=\"none\";");
+}
+}
+</script>
+
+<script type ="text/javascript" >   
+//防止框架
+if (top.location != location) top.location.href = location.href;
+//最大化
+self.moveTo(0,0);
+self.resizeTo(screen.availWidth,screen.availHeight);
+//状态栏文字
+var text  = "『网上手机城：www.zuzugo.net 』 "   
+var speed = 100
+var x = 0   
+function bb() {   
+var a = text.substring(0,x)   
+var b = text.substring(x,x+1).toUpperCase()   
+var c = text.substring(x+1,text.length)   
+window.status = a + b + c   
+if (x == text.length) {   
+x = 0   
+}   
+else {   
+x++   
+}   
+setTimeout("bb()",speed)   
+}   
+bb();   
+
+
+// -->   
+</script>
+</head>
+<body style="text-align: center;font-size: 10pt; background-image: url(image/bg6.gif);" >
+    <form id="form1" runat="server">
+    <div style="background-color: #ffffff; text-align: center; width :880px;background-image: url(image/bg6.gif); font-size: 10pt;">
+        <table style="height: 338px" width="778">
+                <tr>
+                    <td colspan="4" style="height: 28px; vertical-align: top; text-align: center;">
+                        <div style="text-align: center">
+                            <div style="text-align: left; vertical-align: top;">
+                                <div style="text-align: center">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="center" colspan="2" style="vertical-align: top; text-align: left; width: 778px; height: 90px;">
+                                                <img src="image/Phonehead1.gif" style="width: 922px; height: 85px;" /></td>
+                                        </tr>
+                                    </table>
+                                    <span style="font-size: 12pt">
+                                    <span style="color: #0000ff; text-decoration: none;">
+                                        <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" Font-Size="10pt">
+                                            <Items>
+                                                <asp:MenuItem Text="商城首页 " Value="商城首页 " NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                                            </Items>
+                                        </asp:Menu>
+                                    </span></span>
+                                </div>
+                            </div>
+                        </div>
+                        </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="height: 17px; text-align: left">
+                        <asp:Label ID="Label1" runat="server" Text="Label" Width="256px" Height="22px"></asp:Label>
+                        &nbsp; 
+                        <br />
+                        <br />
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:TextBox ID="TextBox1" runat="server" Width="107px"></asp:TextBox>&nbsp;<asp:DropDownList ID="DropDownList1" runat="server">
+                            <asp:ListItem>手机名称</asp:ListItem>
+                            <asp:ListItem>手机型号</asp:ListItem>
+                            <asp:ListItem>手机产地</asp:ListItem>
+                        </asp:DropDownList><asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="搜索" /></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: right; height: 14px; font-size: 10pt;">
+                        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Height="25px"
+                            Orientation="Horizontal" Width="300px">
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; height: 300px; text-align: " colspan="4">
+                        
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <p style="height: 169px">
+                                <br />
+                            </p>
+                            <p>
+                            </p>
+                        </asp:ContentPlaceHolder>
+                       
+                        <div style="text-align: center">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" >
+                                <tr>
+                                    <td align="center" colspan="2">
+                                        <img src="image/xiepaif.gif" style="width: 879px" /><br />
+                                    </td>
+                                    <td align="center" style="width: 10%">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="width: 10%">
+                                    </td>
+                                    <td align="center" style="width: 80%">
+                                        &nbsp;</td>
+                                    <td align="center" style="width: 10%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+                    </td>
+                </tr>
+            </table>
+        <div style="text-align: center">
+        </div>
+            <div style="text-align: center; background-color: #ffffff;">
+            <br />
+                </div>
+    </div>
+    </form>
+</body>
+</html>

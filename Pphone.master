@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Pphone.master.cs" Inherits="Pphone" %>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>网上手机商城</title>
+     <link rel="stylesheet" href="image/css.css" type="text/css" />
+     <script type ="text/javascript" >   
+//防止框架
+if (top.location != location) top.location.href = location.href;
+//最大化
+self.moveTo(0,0);
+self.resizeTo(screen.availWidth,screen.availHeight);
+//状态栏文字
+var text  = "网上手机城 "   
+var speed = 100
+var x = 0   
+function bb() {   
+var a = text.substring(0,x)   
+var b = text.substring(x,x+1).toUpperCase()   
+var c = text.substring(x+1,text.length)   
+window.status = a + b + c   
+if (x == text.length) {   
+x = 0   
+}   
+else {   
+x++   
+}   
+setTimeout("bb()",speed)   
+}   
+bb();   
+
+
+// -->   
+</script>
+</head>
+<body  style="background-color:  #ffffff">
+    <form id="form1" runat="server">
+    <div  class =".font_4"style="background-color: #ffffff">
+        <div style="text-align: center; font-size: 10pt; background-image: url(image/bg6.gif);">
+            <table border="0" cellpadding="0" cellspacing="0" style="height: 380px" width="778">
+                <tr>
+                    <td style="height: 53px; text-align: center; vertical-align: top; width: 779px;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td align="center" colspan="2" style="vertical-align: top; height: 81px; text-align: left">
+                                    <img src="image/Phonehead1.gif" style="width: 880px" /></td>
+                            </tr>
+                        </table>
+                        <span style="color: #0000ff; text-decoration: underline">
+                            <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal">
+                                <Items>
+                                    <asp:MenuItem Text="商城首页 " Value="商城首页 " NavigateUrl="~/Default.aspx"></asp:MenuItem> 
+                                </Items>
+                            </asp:Menu>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 305px; vertical-align: top; text-align: center; width: 779px;">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <img src="image/xiepaif.gif" style="width: 879px" /><br />
+                        <div class="boxd">
+                            <div class="bott_heix">
+                                &nbsp;</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div style="text-align: center">
+                <table border="0" cellpadding="0" cellspacing="0" width="778">
+                    <tr>
+                        <td align="center" style="width: 10%; height: 19px;">
+                        </td>
+                        <td align="center" style="width: 80%; height: 19px;">
+                            &nbsp;</td>
+                        <td align="center" style="width: 100%; height: 19px;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

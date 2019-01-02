@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title=""  description="">
+      <siteMapNode url="userphone.aspx" title="手机管理"  description="" />
+       <siteMapNode url="userInfo.aspx" title="个人信息"  description="" />
+        <siteMapNode url="userOrder.aspx" title="我的购物车"  description="" />
+      <siteMapNode url="Default.aspx" title="退出"  description="" />
+    </siteMapNode>
+</siteMap>
